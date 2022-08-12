@@ -1,0 +1,101 @@
+/* Medias */
+$phone: 425px;
+$tablet: 768px;
+$desktop: 1024px;
+
+/* Colors */
+$primary: rgb(86, 0, 157);
+$secondary: rgb(255, 187, 0);
+$white: rgb(255, 255, 255);
+$light-gray: rgb(237, 237, 237);
+
+/* Fonts */
+$title: 'Righteous', cursive;
+$text: 'Roboto', sans-serif;
+
+/* Mixins */
+@mixin type($weight: regular, $font: $text) {
+  font-weight: map-get(
+    (
+      regular: 400,
+      bold: 500,
+      extrabold: 700,
+    ), $weight
+  );
+  font-family: $font;
+}
+@mixin border-text($color: #fff) {
+  text-shadow: 2px 0 $color, -2px 0 $color, 0 2px $color, 0 -2px $color,
+    1px 1px $color, -1px -1px $color, 1px -1px $color, -1px 1px $color;
+}
+@mixin transition($velocity: 'medium', $item: all, $animation: ease-in-out) {
+  transition: map-get(('fast': $item $animation 0.1s,
+        'medium': $item $animation 0.25s,
+        'slow': $item $animation 0.5s,
+      ), $velocity);
+}
+
+/* CSS */
+body, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include type(regular, $text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include type('bold', $title)
+}
+
+p {
+  @include type('regular', $text)
+}
+
+.btn {
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: $primary;
+  color: $white;
+  font-size: 20pt;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 0 3px 2px rgba(0,0,0,0.3);
+  @include type('bold', $title);
+  @include transition();
+  &:hover {
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
+  }
+}
+
+.btn {
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: $primary;
+  color: $white;
+  font-size: 20pt;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 0 3px 2px rgba(0,0,0,0.3);
+  @include type('bold', $title);
+  @include transition();
+  &:hover {
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
+  }
+}
+
+/* Loading animation */
+
+@keyframes loading-bar {
+  0%  {margin-left: 0;}
+  50% {margin-left: 70%;}
+  100% {margin-left: 0%;}
+}
+
+@mixin loading-animation() {
+  animation-name: loading-bar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}

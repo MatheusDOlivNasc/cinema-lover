@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinema Lover</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Cinema Lover</h1>
+    <div class="spacer"></div>
+    <button class="menu material-icons" onclick="searchBox()">
+      <span class="material-symbols-outlined">
+        more_vert
+      </span>
+    </button>
+    <div class="search-box">
+      <form>
+        <input id="search-text" type="text" minlength="3" placeholder="Pesquise um filme">
+        <button class="material-icons" onclick="search()" type="button">
+          <span class="material-symbols-outlined">
+            search
+          </span>
+        </button>
+      </form>
+      <ul class="search-list">
+      </ul>
+    </div>
+  </header>
+  <section id="header">
+    <div class="movies">
+      <img
+        class="movie-bg-image"
+        src="https://imdb-api.com/API/ResizePoster?apikey=key&size=w1280&url=https://image.tmdb.org/t/p/original/27Mj3rFYP3xqFy7lnz17vEd8Ms.jpg"
+        alt="teste">
+      <div class="movie-info">
+        <div class="movie-poster">
+          <img
+            class="movie-poster-image"
+            src="https://imdb-api.com/API/ResizePoster?apikey=key&size=w300&url=https://m.media-amazon.com/images/M/MV5BOWY4MmFiY2QtMzE1YS00NTg1LWIwOTQtYTI4ZGUzNWIxNTVmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6716_AL_.jpg"
+            alt="teste 2">
+        </div>
+        <div class="movie-panel">
+          <h2 class="pres">Top 1 filmes:</h2>
+          <h3 class="title">The Gray Man (2022)</h3>
+          <p class="casting">Anthony Russo (dir.), Ryan Gosling, Chris Evans</p>
+          <div class="watch">
+            <button class="btn" type="button" onclick="watch('tt10872600')">
+              Assistir
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="list">
+    <h2>Top 10 filmes:</h2>
+    <div class="list-limit">
+      <ul class="movies-list" style="width: 250%; margin-left: 0%;">
+        <li>
+          <div class="image">
+            <img
+              src="https://imdb-api.com/API/ResizePoster?apikey=key&size=w300&url=https://m.media-amazon.com/images/M/MV5BOWY4MmFiY2QtMzE1YS00NTg1LWIwOTQtYTI4ZGUzNWIxNTVmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6716_AL_.jpg"
+              alt="teste">
+          </div>
+          <div class="buttons">
+            <h3>1 - The Gray Man <br>2022</h3>
+            <button class="btn" type="button" onclick="watch('tt10872600')">
+              Assistir
+            </button>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img
+              src="https://imdb-api.com/API/ResizePoster?apikey=key&size=w300&url=https://m.media-amazon.com/images/M/MV5BOWY4MmFiY2QtMzE1YS00NTg1LWIwOTQtYTI4ZGUzNWIxNTVmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6716_AL_.jpg"
+              alt="teste">
+          </div>
+          <div class="buttons">
+            <h3>2 - The Gray Man <br>2022</h3>
+            <button class="btn" type="button" onclick="watch('tt10872600')">
+              Assistir
+            </button>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img
+              src="https://imdb-api.com/API/ResizePoster?apikey=key&size=w300&url=https://m.media-amazon.com/images/M/MV5BOWY4MmFiY2QtMzE1YS00NTg1LWIwOTQtYTI4ZGUzNWIxNTVmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6716_AL_.jpg"
+              alt="teste">
+          </div>
+          <div class="buttons">
+            <h3>3 - The Gray Man <br>2022</h3>
+            <button class="btn" type="button" onclick="watch('tt10872600')">
+              Assistir
+            </button>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img
+              src="https://imdb-api.com/API/ResizePoster?apikey=key&size=w300&url=https://m.media-amazon.com/images/M/MV5BOWY4MmFiY2QtMzE1YS00NTg1LWIwOTQtYTI4ZGUzNWIxNTVmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6716_AL_.jpg"
+              alt="teste">
+          </div>
+          <div class="buttons">
+            <h3>4 - The Gray Man <br>2022</h3>
+            <button class="btn" type="button" onclick="watch('tt10872600')">
+              Assistir
+            </button>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img
+              src="https://imdb-api.com/API/ResizePoster?apikey=key&size=w300&url=https://m.media-amazon.com/images/M/MV5BOWY4MmFiY2QtMzE1YS00NTg1LWIwOTQtYTI4ZGUzNWIxNTVmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6716_AL_.jpg"
+              alt="teste">
+          </div>
+          <div class="buttons">
+            <h3>5 - The Gray Man <br>2022</h3>
+            <button class="btn" type="button" onclick="watch('tt10872600')">
+              Assistir
+            </button>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img
+              src="https://imdb-api.com/API/ResizePoster?apikey=key&size=w300&url=https://m.media-amazon.com/images/M/MV5BOWY4MmFiY2QtMzE1YS00NTg1LWIwOTQtYTI4ZGUzNWIxNTVmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6716_AL_.jpg"
+              alt="teste">
+          </div>
+          <div class="buttons">
+            <h3>6 - The Gray Man <br>2022</h3>
+            <button class="btn" type="button" onclick="watch('tt10872600')">
+              Assistir
+            </button>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img
+              src="https://imdb-api.com/API/ResizePoster?apikey=key&size=w300&url=https://m.media-amazon.com/images/M/MV5BOWY4MmFiY2QtMzE1YS00NTg1LWIwOTQtYTI4ZGUzNWIxNTVmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6716_AL_.jpg"
+              alt="teste">
+          </div>
+          <div class="buttons">
+            <h3>7 - The Gray Man <br>2022</h3>
+            <button class="btn" type="button" onclick="watch('tt10872600')">
+              Assistir
+            </button>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img
+              src="https://imdb-api.com/API/ResizePoster?apikey=key&size=w300&url=https://m.media-amazon.com/images/M/MV5BOWY4MmFiY2QtMzE1YS00NTg1LWIwOTQtYTI4ZGUzNWIxNTVmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6716_AL_.jpg"
+              alt="teste">
+          </div>
+          <div class="buttons">
+            <h3>8 - The Gray Man <br>2022</h3>
+            <button class="btn" type="button" onclick="watch('tt10872600')">
+              Assistir
+            </button>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img
+              src="https://imdb-api.com/API/ResizePoster?apikey=key&size=w300&url=https://m.media-amazon.com/images/M/MV5BOWY4MmFiY2QtMzE1YS00NTg1LWIwOTQtYTI4ZGUzNWIxNTVmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6716_AL_.jpg"
+              alt="teste">
+          </div>
+          <div class="buttons">
+            <h3>9 - The Gray Man <br>2022</h3>
+            <button class="btn" type="button" onclick="watch('tt10872600')">
+              Assistir
+            </button>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img
+              src="https://imdb-api.com/API/ResizePoster?apikey=key&size=w300&url=https://m.media-amazon.com/images/M/MV5BOWY4MmFiY2QtMzE1YS00NTg1LWIwOTQtYTI4ZGUzNWIxNTVmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6716_AL_.jpg"
+              alt="teste">
+          </div>
+          <div class="buttons">
+            <h3>10 - The Gray Man <br>2022</h3>
+            <button class="btn" type="button" onclick="watch('tt10872600')">
+              Assistir
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button class="arrow left material-icons" onclick="slider('.movies-list', '25%')">
+      <span class="material-symbols-outlined">
+        chevron_left
+      </span>
+    </button>
+    <button class="arrow right material-icons" onclick="slider('.movies-list', '-25%')">
+      <span class="material-symbols-outlined">
+        chevron_right
+      </span>
+    </button>
+  </section>
+
+  <footer>
+    <span class="info"> 
+      Os videos são apenas indexados na página.
+    </span>
+    <span class="dev">
+      Site desenvolvido por 
+      <a href="https://www.instagram.com/math_o.nasc">Matheus Nascimento</a>
+    </span>
+  </footer>
+
+  <section id="view" style="display: none;">
+    <div class="view">
+      
+    </div>
+    <button class="close material-icons" onclick="watch()">
+      <span class="material-symbols-outlined">
+        close
+      </span>
+    </button>
+  </section>
+  <section id="loading">
+    <span>
+      <p>Loading</p>
+      <div class="load-bar">
+        <div class="bar load-value"></div>
+      </div>
+    </span>
+  </section>
+  <script src="app.js"></script>
+</body>
+
+</html>
